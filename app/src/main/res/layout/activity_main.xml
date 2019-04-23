@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/A"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:ems="10"
+        android:hint="ax^2="
+        android:inputType="numberSigned|numberDecimal" />
+
+    <EditText
+        android:id="@+id/B"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:hint="bx="
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal" />
+
+    <EditText
+        android:id="@+id/C"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:hint="c="
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:onClick="Random"
+        android:text="Random Ax^2+bx+c" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:onClick="Solution"
+        android:text="For solution" />
+
+    <TextView
+        android:id="@+id/answer1"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:text="Answer" />
+
+    <TextView
+        android:id="@+id/answer2"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:text="Answer:" />
+
+</LinearLayout>
