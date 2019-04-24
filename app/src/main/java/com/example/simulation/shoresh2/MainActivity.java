@@ -12,7 +12,7 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-    Double a, b, c,X1,X2;
+    Double a, b, c,X1;
     String aa, bb, cc;
     Random rnd = new Random();
     EditText A;

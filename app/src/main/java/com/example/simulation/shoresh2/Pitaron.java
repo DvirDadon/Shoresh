@@ -13,7 +13,7 @@ public class Pitaron extends AppCompatActivity {
     TextView x1,x2;
     double a,b,c,d,e,f;
     WebView Wv;
-    String url,aa,bb,cc;
+    String url;
     Intent gi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
