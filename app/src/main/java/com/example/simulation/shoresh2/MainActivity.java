@@ -12,7 +12,7 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-    Double a, b, c,X1;
+    Double a, b, c;
     String aa, bb, cc;
     Random rnd = new Random();
     EditText A;
@@ -70,9 +70,8 @@ public class MainActivity extends AppCompatActivity {
         if(source==1){
             if (good==RESULT_OK){
                 if (data!=null) {
-                    X1=data.getDoubleExtra("n",9999.9);
-                    answer1.setText("x1="+" "+ X1);
-                    answer2.setText("x2=" +" "+ data.getDoubleExtra("nn", 9999.9));
+                    answer1.setText("x1="+" "+ data.getStringExtra("n"));
+                    answer2.setText("x2=" +" "+ data.getStringExtra("nn"));
                 }
                 }
         }

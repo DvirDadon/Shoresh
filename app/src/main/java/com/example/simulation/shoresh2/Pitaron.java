@@ -12,6 +12,7 @@ import android.widget.TextView;
 public class Pitaron extends AppCompatActivity {
     TextView x1,x2;
     double a,b,c,d,e,f;
+    String X1="There is no soloution",X2="There is no solution";
     WebView Wv;
     String url;
     Intent gi;
@@ -29,12 +30,21 @@ public class Pitaron extends AppCompatActivity {
             Wv = (WebView) findViewById(R.id.wV);
             url = "https://www.google.com/search?ei=mkSmXM6QIeOS1fAP_aaKwAk&q=" + a + "x%5E2%2B" + b + "x%2B" + c + "&oq=5x%5E2%2B2x%2B3&gs_l=psy-ab.3..0i203j0i30l9.7136711.7143291..7143563...0.0..0.151.1143.0j9......0....1..gws-wiz.......35i39j0i131j0j35i39i19.WDPr0vE0iME";
             b = b * (-1);
-            d = Math.sqrt(Math.pow(b, 2) + (-4 * a * c));
-            a = a * 2;
-            e = (b + d) / a;
-            f = (b - d) / a;
-            x1.setText("x1="+" "+ e);
-            x2.setText("x2="+" "+ f);
+            if(Math.pow(b,2)+(-4*a*c)<0){
+                x1.setText(X1);
+                x2.setText(X2);
+            }
+            else {
+                d = Math.sqrt(Math.pow(b, 2) + (-4 * a * c));
+
+                a = a * 2;
+                e = (b + d) / a;
+                f = (b - d) / a;
+                X1=(e+"");
+                X2=(f+"");
+                x1.setText("x1=" + " " + e);
+                x2.setText("x2=" + " " + f);
+            }
             Wv.getSettings().setJavaScriptEnabled(true);
             Wv.loadUrl(url);
             Wv.setWebViewClient(new WebViewClient());
@@ -44,8 +54,8 @@ public class Pitaron extends AppCompatActivity {
 
 
     public void Kelet(View view) {
-        gi.putExtra("n",e);
-        gi.putExtra("nn",f);
+        gi.putExtra("n",X1);
+        gi.putExtra("nn",X2);
         setResult(RESULT_OK,gi);
         finish();
     }
