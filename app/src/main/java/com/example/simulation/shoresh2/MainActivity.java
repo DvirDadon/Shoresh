@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         if(source==1){
             if (good==RESULT_OK){
                 if (data!=null) {
-                    answer1.setText("x1=" + " " + data.getStringExtra("nn"));
+                    answer1.setText("x1=" + " " + data.getStringExtra("n"));
                     answer2.setText("x2=" +" "+ data.getStringExtra("nn"));
                 }
                 }
