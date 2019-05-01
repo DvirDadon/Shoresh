@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             aa = A.getText().toString();
             bb = B.getText().toString();
             cc = C.getText().toString();
-            if((aa.equals(""))||(bb.equals(""))||(cc.equals(""))||(aa.equals("-"))||(bb.equals("-"))||(cc.equals("-")))
+            if ((aa.equals("")) || (bb.equals("")) || (cc.equals("")) || (aa.equals("-")) || (bb.equals("-")) || (cc.equals("-")) || (aa.equals(".")) || bb.equals(".") || cc.equals(".") || aa.equals("+") || bb.equals("+") || cc.equals("+"))
                 Toast.makeText(this, "Enter ax^2+bx+c before doing a solution", Toast.LENGTH_SHORT).show();
             else {
                 a = Double.parseDouble(aa);

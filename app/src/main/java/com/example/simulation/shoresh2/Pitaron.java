@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
@@ -16,6 +17,7 @@ public class Pitaron extends AppCompatActivity {
     WebView Wv;
     String url;
     Intent gi;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,8 +35,7 @@ public class Pitaron extends AppCompatActivity {
             if(Math.pow(b,2)+(-4*a*c)<0){
                 x1.setText(X1);
                 x2.setText(X2);
-            }
-            else {
+            } else {
                 d = Math.sqrt(Math.pow(b, 2) + (-4 * a * c));
 
                 a = a * 2;
@@ -52,7 +53,6 @@ public class Pitaron extends AppCompatActivity {
     }
 
 
-
     public void Kelet(View view) {
         gi.putExtra("n",X1);
         gi.putExtra("nn",X2);
@@ -61,12 +61,12 @@ public class Pitaron extends AppCompatActivity {
     }
 
     private class MyWebViewClient extends WebViewClient {
-    @Override
-        public boolean shouldOverrideUrlLoading(WebView view ,String url){
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view , String url){
             view.loadUrl(url);
             return true;
         }
     }
 
-
 }
+
